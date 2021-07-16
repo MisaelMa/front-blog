@@ -1,18 +1,39 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <!-- <hello-world /> -->
+  <v-container>
+      <v-card
+      class="mx-auto"
+      max-width="500"
+    >
+      <v-list>
+        <v-list-item-group >
+          <v-list-item @click="imprimirHola">Formulario</v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-card>
+  </v-container>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+  import Vue from 'vue'
+  import HelloWorld from '../components/HelloWorld.vue'
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class Home extends Vue {}
+  export default Vue.extend({
+    name: 'Home',
+    data: function(){
+      return ({
+
+      });
+    },
+    components: {
+      HelloWorld,
+    },
+    methods:{
+      imprimirHola(evt:Event){
+        // console.log(this.$router.push);
+        this.$router.push({name:'Formulario'});
+      }
+      
+    }
+  })
 </script>
