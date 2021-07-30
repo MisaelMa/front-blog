@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted, PropType} from "@vue/composition-api";
+import {defineComponent, onBeforeUpdate, onMounted, PropType} from "@vue/composition-api";
 import Item from "./Item.vue"
 import {User} from "@/models/Users";
 
@@ -24,6 +24,10 @@ export default defineComponent({
   setup() {
     onMounted(() => {
       console.log('List Montando')
+    })
+
+    onBeforeUpdate(() => {
+      console.log('List UPDATE')
     })
   }
 })

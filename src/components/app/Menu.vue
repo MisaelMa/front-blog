@@ -68,6 +68,7 @@ export default defineComponent({
       {title: 'Componentes', icon: mdiPackageVariantClosed, path: '/componentes'},
       {title: 'Props', icon: mdiLockPattern, path: '/props'},
       {title: 'Emits', icon: mdiPhone, path: '/emits'},
+      {title: 'Funciones', icon: mdiPhone, path: '/functions'},
       {title: 'Events', icon: mdiCursorDefaultClick, path: '/events'},
 
     ]

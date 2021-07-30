@@ -3,6 +3,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" lg="10">
+        {{name}}
         <v-text-field v-model="name"
                       outlined
                       dense
@@ -14,6 +15,7 @@
         </v-btn>
       </v-col>
     </v-row>
+
     <List :users="users"></List>
   </v-container>
 </template>
@@ -27,6 +29,7 @@ import {
   ref,
   onActivated
 } from "@vue/composition-api";
+
 import Lifecycle from "@/components/List.vue";
 import List from "@/components/List.vue";
 import {User} from "@/models/Users";
@@ -49,19 +52,21 @@ export default defineComponent({
       }
     ])
     const addUser = () => {
-      users.value.push({
-        id: Date.now(),
-        name: name.value
-      })
-      name.value = ""
+      name.value = "Alfredo"
+      // users.value.push({
+      //   id: Date.now(),
+      //   name: name.value
+      // })
+      // name.value = ""
     }
     onMounted(() => {
-      console.log('HOME Montando')
+      console.log('LIFE Montando')
     })
 
     onBeforeUpdate(() => {
-      console.log('HOME uPDATE')
+      console.log('LIFE UPDATE')
     })
+
     return {
       users,
       name,
