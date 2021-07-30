@@ -138,7 +138,7 @@ export default defineComponent({
     `
 
     onMounted(() => {
-      console.log(tabla.value.$el)
+
     })
     const hola = () => {
       console.log('hola')
